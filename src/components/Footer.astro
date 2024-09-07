@@ -1,17 +1,52 @@
 ---
-import Social from "./Social.astro";
+const currentYear: number = new Date().getFullYear();
 ---
 
+<footer class="footer">
+  <p class="footer-text">Let's Connect!</p>
+  <div class="social-icons">
+    <!-- GitHub -->
+    <a href="https://github.com/BengeeL" target="_blank" class="icon-link">
+      <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" class="icon">
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/benjaminlefebvre1024" target="_blank" class="icon-link">
+      <img src="https://img.icons8.com/ios-filled/50/0077b5/linkedin.png" alt="LinkedIn" class="icon">
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@benjaminlefebvredev" target="_blank" class="icon-link">
+      <img src="https://img.icons8.com/ios-filled/50/FF0000/youtube-play.png" alt="YouTube" class="icon">
+    </a>
+  </div>
+  <p class="footer-credit">© {currentYear} Benjamin Lefebvre | All Rights Reserved</p>
+</footer>
+
 <style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    color: #6c757d;
+  }
+
+  .social-icons {
+    margin: 10px 0;
+  }
+
+  .icon-link {
+    margin: 0 10px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-credit {
+    font-size: 14px;
+    color: #6c757d;
   }
 </style>
-
-<footer>
-  <Social platform='LinkedIn' username='in/benjaminlefebvre1024' />
-  <Social platform='Github' username='bengeel' />
-  <Social platform='Youtube' username='@benjaminlefebvredev' />
-</footer>
