@@ -1,7 +1,83 @@
 ---
+import Socials from "../components/Socials.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <h2>My awesome blog subtitle</h2>
+  <div class='hero'>
+    <img
+      src='/src/images/benjamin_portrait.webp'
+      alt='Portrait of Benjamin Lefebvre'
+      class='img-portait'
+    />
+    <h1>Benjamin Lefebvre</h1>
+    <div class='hero-contact'>
+      <!-- CURRENT WORK -->
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 512 512'
+        class='hero-icon'
+        ><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+          d='M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z'
+        ></path>
+      </svg>
+      Student at Centennial College
+
+      <!-- LOCATION -->
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 384 512'
+        class='hero-icon'
+        ><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+          d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'
+        ></path>
+      </svg>
+      Toronto, ON
+    </div>
+    <Socials />
+  </div>
+
+  <div class='content'>
+    <h2>About</h2>
+    <p>
+      Welcome to my personal website! I'm a software engineer with a passion for
+      web development. I'm currently working on a variety of projects, including
+      this website, to showcase my skills and experience. Feel free to explore
+      my site and connect with me on social media!
+    </p>
+
+    <h2>Experience</h2>
+    <p>
+      Welcome to my personal website! I'm a software engineer with a passion for
+      web development. I'm currently working on a variety of projects, including
+      this website, to showcase my skills and experience. Feel free to explore
+      my site and connect with me on social media!
+    </p>
+
+    <h2>Eduction</h2>
+    <p>
+      Welcome to my personal website! I'm a software engineer with a passion for
+      web development. I'm currently working on a variety of projects, including
+      this website, to showcase my skills and experience. Feel free to explore
+      my site and connect with me on social media!
+    </p>
+
+    <h2>Skills</h2>
+    <p>
+      Welcome to my personal website! I'm a software engineer with a passion for
+      web development. I'm currently working on a variety of projects, including
+      this website, to showcase my skills and experience. Feel free to explore
+      my site and connect with me on social media!
+    </p>
+
+    <h2>Projects</h2>
+    <p>
+      Welcome to my personal website! I'm a software engineer with a passion for
+      web development. I'm currently working on a variety of projects, including
+      this website, to showcase my skills and experience. Feel free to explore
+      my site and connect with me on social media!
+    </p>
+  </div>
 </BaseLayout>
