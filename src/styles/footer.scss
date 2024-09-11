@@ -27,6 +27,8 @@
 
 .icon:hover {
     fill: colors.$dark-3;
+    transition: ease-in-out 0.3s;
+    transform: scale(1.1);
 }
 
 .footer-credit {
