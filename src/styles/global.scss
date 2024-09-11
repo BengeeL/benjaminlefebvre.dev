@@ -23,6 +23,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  margin: 3rem 0 0 0;
+}
+
 /* nav styles */
 
 .nav-links {
@@ -68,4 +72,21 @@ h1 {
   width: 0.8rem;
   height: 0.8rem;
   fill: colors.$dark-1;
+}
+
+.experience-tile {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: colors.$light-2;
+  border: 2px solid colors.$dark-3;
+}
+
+.experience-header {
+  margin: 0;
+}
+
+.experience-description {
+  margin: 0;
+  color: colors.$dark-3;
 }
