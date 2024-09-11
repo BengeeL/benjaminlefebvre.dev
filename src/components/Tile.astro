@@ -1,0 +1,15 @@
+---
+const { title, business, location, date, logo, logoAlt } = Astro.props;
+---
+
+<div class='experience-line'>
+  <div>
+    <img src={logo} alt={logoAlt} class='img-logo' />
+  </div>
+  <div class='experience-tile'>
+    <h3 class='experience-header'>{title}</h3>
+    <p class='experience-description'>{business}</p>
+    <p class='experience-description'>{location}</p>
+    <p class='experience-description'>{date}</p>
+  </div>
+</div>

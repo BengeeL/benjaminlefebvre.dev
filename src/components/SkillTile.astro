@@ -1,0 +1,12 @@
+---
+import Tag from "./Tag.astro";
+
+const { skill, skills } = Astro.props;
+---
+
+<div class='skill-line'>
+  <h3 class='skill-header'>{skill}</h3>
+  <div class='skill-tags'>
+    {skills.map((tag: String) => <Tag skill={tag} />)}
+  </div>
+</div>

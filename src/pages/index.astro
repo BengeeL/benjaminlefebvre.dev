@@ -1,5 +1,8 @@
 ---
 import Hero from "../components/Hero.astro";
+import SkillTile from "../components/SkillTile.astro";
+import Tag from "../components/Tag.astro";
+import Tile from "../components/Tile.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -16,62 +19,93 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
     <h2>EXPERIENCE</h2>
-    <div class='experience-line'>
-      <div>
-        <img
-          src='/src/images/advanced_utility_system.webp'
-          alt='Advanced Utility System Logo'
-          class='img-logo'
-        />
-      </div>
-      <div class='experience-tile'>
-        <h3 class='experience-header'>Junior Software Developer Internship</h3>
-        <p class='experience-description'>Advanced Utility System</p>
-        <p class='experience-description'>Toronto, Canada (Remote)</p>
-        <p class='experience-description'>January 2023 - December 2023</p>
-      </div>
-    </div>
+    <Tile
+      title='Junior Software Developer Internship'
+      business='Advanced Utility System'
+      location='Toronto, Canada (Remote)'
+      date='January 2023 - December 2023'
+      logo='/src/images/advanced_utility_system.webp'
+      logoAlt='Advanced Utility System Logo'
+    />
 
     <h2>EDUCATION</h2>
-    <div class='experience-line'>
-      <div>
-        <img
-          src='/src/images/centennial.webp'
-          alt='Centennial College Logo'
-          class='img-logo'
-        />
-      </div>
-      <div class='experience-tile'>
-        <h3 class='experience-header'>Software Engineering Technology</h3>
-        <p class='experience-description'>Centennial College</p>
-        <p class='experience-description'>Toronto, Canada (Remote)</p>
-        <p class='experience-description'>September 2021 - April 2025</p>
-      </div>
-    </div>
+    <Tile
+      title='Software Engineering Technology'
+      business='Centennial College'
+      location='Toronto, Canada (Remote)'
+      date='September 2021 - April 2025'
+      logo='/src/images/centennial.webp'
+      logoAlt='Centennial College Logo'
+    />
 
-    <div class='experience-line'>
-      <div>
-        <img
-          src='/src/images/la_cite.webp'
-          alt='La Cité Collegial Logo'
-          class='img-logo'
-        />
-      </div>
-      <div class='experience-tile'>
-        <h3 class='experience-header'>Advertising & Marketing Communication</h3>
-        <p class='experience-description'>La Cité</p>
-        <p class='experience-description'>Ottawa, Canada</p>
-        <p class='experience-description'>September 2016 - April 2018</p>
-      </div>
-    </div>
+    <Tile
+      title='Advertising & Marketing Communication'
+      business='La Cité'
+      location='Ottawa, Canada'
+      date='September 2016 - April 2018'
+      logo='/src/images/la_cite.webp'
+      logoAlt='La Cité Collegial Logo'
+    />
 
     <h2>SKILLS</h2>
-    <p>
-      Welcome to my personal website! I'm a software engineer with a passion for
-      web development. I'm currently working on a variety of projects, including
-      this website, to showcase my skills and experience. Feel free to explore
-      my site and connect with me on social media!
-    </p>
+    <SkillTile
+      skill='Languages'
+      skills={[
+        "C#",
+        "Swift",
+        "SwiftUI",
+        "Java",
+        "TypeScript",
+        "HTML",
+        "SASS",
+        "Kotlin",
+        "SQL",
+        "JavaScript",
+        "Python",
+        "Shell",
+      ]}
+    />
+
+    <SkillTile
+      skill='Frameworks & Libraries'
+      skills={[
+        "React.js",
+        "Next.js",
+        "Vue.js",
+        "Angular",
+        "Node.js",
+        "Express.js",
+        "Bootstrap",
+        "jQuery",
+        "Astro",
+        "EJS",
+        "Spring",
+      ]}
+    />
+
+    <SkillTile
+      skill='Databases/Hosting'
+      skills={[
+        "Azure",
+        "MongoDB",
+        "SQL Server",
+        "Oracle Database",
+        "Heroku",
+        "Firebase/Firestore",
+      ]}
+    />
+
+    <SkillTile
+      skill='Tools'
+      skills={[
+        "Git",
+        "Jira",
+        "Figma",
+        "IntelliJ",
+        "Eclipse",
+        "Visual Studio Code",
+      ]}
+    />
 
     <h2>PROJECTS</h2>
     <p>
