@@ -1,0 +1,15 @@
+---
+import SkillTile from "./SkillTile.astro";
+import Tag from "./Tag.astro";
+
+const { image, title, description, tags } = Astro.props;
+---
+
+<div class='project-tile'>
+  <img src={image} alt={title} class='project-image' />
+  <div class='project-tile-content'>
+    <h3 class='project-title'>{title}</h3>
+    <p class='project-description'>{description}</p>
+    <SkillTile skill='Technologies' tags={tags} />
+  </div>
+</div>

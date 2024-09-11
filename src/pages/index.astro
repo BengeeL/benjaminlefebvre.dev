@@ -2,8 +2,9 @@
 import Hero from "../components/Hero.astro";
 import SkillTile from "../components/SkillTile.astro";
 import Tag from "../components/Tag.astro";
-import Tile from "../components/Tile.astro";
+import Tile from "../components/ExperienceTile.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectTile from "../components/ProjectTile.astro";
 ---
 
 <BaseLayout>
@@ -50,7 +51,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h2>SKILLS</h2>
     <SkillTile
       skill='Languages'
-      skills={[
+      tags={[
         "C#",
         "Swift",
         "SwiftUI",
@@ -68,7 +69,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <SkillTile
       skill='Frameworks & Libraries'
-      skills={[
+      tags={[
         "React.js",
         "Next.js",
         "Vue.js",
@@ -85,7 +86,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <SkillTile
       skill='Databases/Hosting'
-      skills={[
+      tags={[
         "Azure",
         "MongoDB",
         "SQL Server",
@@ -97,7 +98,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <SkillTile
       skill='Tools'
-      skills={[
+      tags={[
         "Git",
         "Jira",
         "Figma",
@@ -108,12 +109,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     />
 
     <h2>PROJECTS</h2>
-    <p>
-      Welcome to my personal website! I'm a software engineer with a passion for
-      web development. I'm currently working on a variety of projects, including
-      this website, to showcase my skills and experience. Feel free to explore
-      my site and connect with me on social media!
-    </p>
+    <div style="display: flex;">
+      <ProjectTile
+        image='/src/images/flavorshare.png'
+        title='FlavorShare'
+        description='FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.'
+        tags={["xCode", "Swift", "SwiftUI", "Firebase", "Firestore", "Figma"]}
+      />
+
+      <ProjectTile
+        image='/src/images/flavorshare.png'
+        title='FlavorShare'
+        description='FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.'
+        tags={["xCode", "Swift", "SwiftUI", "Firebase", "Firestore", "Figma"]}
+      />
+    </div>
 
     <h2>CONTACT ME</h2>
     <p>

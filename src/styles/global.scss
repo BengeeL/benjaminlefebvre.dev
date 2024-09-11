@@ -128,3 +128,23 @@ h3 {
   background-color: colors.$light-2;
   border: 2px solid colors.$light-3;
 }
+
+.project-tile {
+  margin: 1rem 2.5% 1rem;
+  padding: 1rem;
+  width: 45%;
+  border-radius: 25px;
+  background-color: colors.$light-2;
+  border: 2px solid colors.$light-3;
+}
+
+.project-tile .tag {
+  background-color: colors.$light-1;
+  border: 2px solid colors.$light-3;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
