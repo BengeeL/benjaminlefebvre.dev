@@ -92,6 +92,12 @@ a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
+  background: linear-gradient(90deg, colors.$purple-3, colors.$dark-3, colors.$purple-3);
+  background-size: 200% 200%; // Ensures the gradient can move
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 10s infinite;
 }
 
 .nav-links a:hover,
@@ -100,8 +106,8 @@ a {
 }
 
 .img-portait {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 75px;
   // filter: drop-shadow(0px 0px 15px colors.$dark-2);
 }
