@@ -1,37 +1,37 @@
-@use 'colors';
+@use "colors";
 
 .footer {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .footer-text {
-    font-size: 1rem;
-    color: colors.$dark-1;
+  font-size: 1rem;
+  color: colors.$dark-1;
 }
 
 .social-icons {
-    margin: 10px 0; 
+  margin: 10px 0;
 }
 
 .icon-link {
-    margin: 0 10px;
-    text-decoration: none;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 .icon {
-    width: 2rem;
-    height: 2rem;
-    fill: colors.$dark-1;
+  width: 2rem;
+  height: 2rem;
+  fill: colors.$dark-1;
 }
 
 .icon:hover {
-    fill: colors.$dark-3;
-    transition: ease-in-out 0.3s;
-    transform: scale(1.1);
+  fill: colors.$purple-2;
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
 }
 
 .footer-credit {
-    font-size: 0.8rem;
-    color: colors.$dark-1;
+  font-size: 0.8rem;
+  color: colors.$dark-1;
 }
