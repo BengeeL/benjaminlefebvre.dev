@@ -113,15 +113,23 @@ a {
     border-radius: 75px 75px 10px 75px;
   }
   5% {
+    scale: 0.9;
     border-radius: 75px 75px 75px 75px;
   }
-  60% {
+  50% {
+    scale: 1.2;
     border-radius: 10px 75px 10px 75px;
   }
   70% {
+    scale: 1;
     border-radius: 75px 10px 75px 10px;
   }
+  90% {
+    scale: 0.9;
+    border-radius: 75px 75px 10px 75px;
+  }
   100% {
+    scale: 1;
     border-radius: 75px 75px 10px 75px;
   }
 }
