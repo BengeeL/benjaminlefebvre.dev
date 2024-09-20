@@ -1,9 +1,28 @@
 @use "colors" as *;
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Define CSS variables for light and dark modes */
+:root {
+  --background-color: #{$light-1};
+  --text-color: #{$dark-1};
+  --accent-color: #{$purple-3};
+  --border-color: #{$light-3};
+  --tag-bg-color: #{$light-2};
+  --tag-text-color: #{$dark-1};
+}
+
+html.dark-mode {
+  --background-color: #{$dark-1};
+  --text-color: #{$light-1};
+  --accent-color: #{$purple-1};
+  --border-color: #{$dark-3};
+  --tag-bg-color: #{$dark-2};
+  --tag-text-color: #{$light-2};
+}
+
 html {
-  background-color: $light-1;
-  color: $dark-1;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "Montserrat", sans-serif;
   user-select: none;
 }
@@ -20,59 +39,82 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+h1,
+h2,
+h3 {
   font-family: "Dela Gothic One", sans-serif;
   background-image: url("images/gradiant.png");
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 10s infinite;
+  background-size: 200% 200%;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 h2 {
   margin: 3rem 0 0 0;
-  font-family: "Dela Gothic One", sans-serif;
-  background-image: url("images/gradiant.png");
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 10s infinite;
 }
 
 h3 {
   margin: 2rem 0 0 0;
-  background: linear-gradient(90deg, $purple-3, $dark-3, $purple-3);
-  background-size: 200% 200%; // Ensures the gradient can move
-  -webkit-background-clip: text;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--text-color),
+    var(--accent-color)
+  );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 10s infinite;
 }
 
 a {
-  color: $dark-1;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 @keyframes gradient-animation {
   0% {
     background-position: 0% 100%;
-    // rotate: -0.5deg;
   }
   50% {
     background-position: 100% 0%;
-    // rotate: 0.5deg;
   }
   100% {
     background-position: 0% 100%;
-    // rotate: -0.5deg;
   }
 }
 
-/* nav styles */
+#themeToggle {
+  border: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--tag-bg-color);
+  cursor: pointer;
+}
+.sun {
+  fill: var(--text-color);
+  width: 50px;
+  height: 50px;
+}
+.moon {
+  fill: transparent;
+  width: 50px;
+  height: 50px;
+}
 
+html.dark-mode .sun {
+  fill: transparent;
+}
+html.dark-mode .moon {
+  fill: var(--text-color);
+}
+
+/* nav styles */
 .nav-links {
   display: block;
   position: static;
@@ -82,7 +124,7 @@ a {
 }
 
 .nav-links a {
-  color: $dark-1;
+  color: var(--text-color);
   display: inline-block;
   margin: 20px 30px 20px 0px;
   text-align: center;
@@ -98,7 +140,7 @@ a {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: $purple-3;
+  color: var(--accent-color);
 }
 
 .img-portait {
@@ -138,7 +180,6 @@ a {
   height: 70px;
   border-radius: 35px;
   margin: 2rem 0 0 1rem;
-  // filter: drop-shadow(0px 0px 15px colors.$dark-2);
 }
 
 .hero {
@@ -153,23 +194,16 @@ a {
 .hero-icon {
   width: 0.8rem;
   height: 0.8rem;
-  fill: $dark-1;
+  fill: var(--text-color);
 }
 
 .hero-icon:hover {
-  width: 0.8rem;
-  height: 0.8rem;
-  fill: $purple-1;
+  fill: var(--accent-color);
   transform: scale(1.2);
 }
 
 .experience-line {
   display: flex;
-  // margin: 1rem 0;
-  // padding: 1rem;
-  // border-radius: 25px;
-  // background-color: colors.$light-2;
-  // border: 2px solid colors.$dark-3;
 }
 
 .experience-tile {
@@ -177,8 +211,8 @@ a {
   padding: 1rem;
   width: 100%;
   border-radius: 25px;
-  background-color: $light-2;
-  border: 2px solid $light-3;
+  background-color: var(--tag-bg-color);
+  border: 2px solid var(--border-color);
 }
 
 .experience-header {
@@ -187,7 +221,7 @@ a {
 
 .experience-description {
   margin: 0;
-  color: $dark-3;
+  color: var(--tag-text-color);
 }
 
 .skill-tags,
@@ -200,39 +234,23 @@ a {
   margin: 0.2rem 0.2rem;
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  background-color: $light-2;
-  // border: 2px solid transparent;
-  // border-image: url("images/gradiant.png") 1;
-  // background-clip: padding-box; /* Ensures the background color respects the border radius */
-  // animation: gradient-animation 10s infinite;
+  background-color: var(--tag-bg-color);
   text-decoration: none;
   user-select: none;
-  color: $dark-1;
+  color: var(--tag-text-color);
 }
-
-// .tag:hover {
-//   background-color: $dark-1;
-//   color: $light-1;
-//   font-weight: bold;
-// }
 
 .project-tile .tag {
-  background-color: $light-1;
+  background-color: var(--background-color);
 }
-
-// .project-tile .tag:hover {
-//   background-color: $dark-1;
-//   color: $light-1;
-//   font-weight: bold;
-// }
 
 .project-tile {
   margin: 1rem 0;
   padding: 1rem;
   width: 100%;
   border-radius: 25px;
-  background-color: $light-2;
-  border: 2px solid $light-3;
+  background-color: var(--tag-bg-color);
+  border: 2px solid var(--border-color);
   display: inline-flex;
 }
 
@@ -260,4 +278,40 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1rem;
+  // color: colors.$dark-1;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.icon-link {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--text-color);
+}
+
+.icon:hover {
+  fill: var(--accent-color);
+  transition: ease-in-out 0.3s;
+  transform: scale(1.1);
+}
+
+.footer-credit {
+  font-size: 0.8rem;
+  // color: colors.$dark-1;
 }
