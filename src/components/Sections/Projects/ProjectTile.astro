@@ -1,0 +1,32 @@
+---
+import SkillTile from "../Skills/SkillTile.astro";
+import Github from "../../Socials/Github.astro";
+import LinkedIn from "../../Socials/LinkedIn.astro";
+
+const { image, title, description, toolsTags, frontendTags, backendTags } =
+  Astro.props;
+---
+
+<div class='project-tile'>
+  <!-- IMAGE  -->
+  <a href='https://flavorshare.app/' target='_blank'>
+    <img src={image} alt={title} class='project-image' />
+  </a>
+
+  <div class='project-tile-content'>
+    <h3 class='project-title'>{title}</h3>
+    <p class='project-description'>{description}</p>
+
+    <SkillTile skill='Tools' tags={toolsTags} />
+    <SkillTile skill='Frontend' tags={frontendTags} />
+    <SkillTile skill='Backend' tags={backendTags} />
+
+    <div class='project-company-links'>
+      <Github url='https://github.com/BengeeL/FlavorShare' />
+      <Github
+        url='https://github.com/BengeeL/Coming-Soon-FlavorShare-Website'
+      />
+      <LinkedIn url='https://www.linkedin.com/company/flavorshare/' />
+    </div>
+  </div>
+</div>

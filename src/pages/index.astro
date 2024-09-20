@@ -1,136 +1,19 @@
 ---
-import Hero from "../components/Hero.astro";
-import SkillTile from "../components/SkillTile.astro";
-import Tag from "../components/Tag.astro";
-import Tile from "../components/ExperienceTile.astro";
+import Hero from "../components/Sections/About/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectTile from "../components/ProjectTile.astro";
+import Project from "../components/Sections/Projects/Projects.astro";
+import Experience from "../components/Sections/Experience/Experience.astro";
+import Education from "../components/Sections/Education/Education.astro";
+import Skills from "../components/Sections/Skills/Skills.astro";
 ---
 
 <BaseLayout>
   <Hero />
 
   <div class='content'>
-    <h2>ABOUT</h2>
-    <p>
-      Welcome to my personal website! I'm a software engineer with a passion for
-      web development. I'm currently working on a variety of projects, including
-      this website, to showcase my skills and experience. Feel free to explore
-      my site and connect with me on social media!
-    </p>
-
-    <h2>EXPERIENCE</h2>
-    <Tile
-      title='Junior Software Developer Internship'
-      business='Advanced Utility System'
-      location='Toronto, Canada (Remote)'
-      date='January 2023 - December 2023'
-      logo='/src/images/advanced_utility_system.webp'
-      logoAlt='Advanced Utility System Logo'
-    />
-
-    <h2>EDUCATION</h2>
-    <Tile
-      title='Software Engineering Technology'
-      business='Centennial College'
-      location='Toronto, Canada (Remote)'
-      date='September 2021 - April 2025'
-      logo='/src/images/centennial.webp'
-      logoAlt='Centennial College Logo'
-    />
-
-    <Tile
-      title='Advertising & Marketing Communication'
-      business='La Cité'
-      location='Ottawa, Canada'
-      date='September 2016 - April 2018'
-      logo='/src/images/la_cite.webp'
-      logoAlt='La Cité Collegial Logo'
-    />
-
-    <h2>SKILLS</h2>
-    <SkillTile
-      skill='Languages'
-      tags={[
-        "C#",
-        "Swift",
-        "SwiftUI",
-        "Java",
-        "TypeScript",
-        "HTML",
-        "SASS",
-        "Kotlin",
-        "SQL",
-        "JavaScript",
-        "Python",
-        "Shell",
-      ]}
-    />
-
-    <SkillTile
-      skill='Frameworks & Libraries'
-      tags={[
-        "React.js",
-        "Next.js",
-        "Vue.js",
-        "Angular",
-        "Node.js",
-        "Express.js",
-        "Bootstrap",
-        "jQuery",
-        "Astro",
-        "EJS",
-        "Spring",
-      ]}
-    />
-
-    <SkillTile
-      skill='Databases/Hosting'
-      tags={[
-        "Azure",
-        "MongoDB",
-        "SQL Server",
-        "Oracle Database",
-        "Heroku",
-        "Firebase/Firestore",
-      ]}
-    />
-
-    <SkillTile
-      skill='Tools'
-      tags={[
-        "Git",
-        "Jira",
-        "Figma",
-        "IntelliJ",
-        "Eclipse",
-        "Visual Studio Code",
-      ]}
-    />
-
-    <h2>PROJECTS</h2>
-    <!-- <div style="display: flex;"> -->
-    <ProjectTile
-      image='/src/images/flavorshare.png'
-      title='FlavorShare'
-      description='FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.'
-      tags={["xCode", "Swift", "SwiftUI", "Firebase", "Firestore", "Figma"]}
-    />
-
-    <ProjectTile
-      image='/src/images/flavorshare.png'
-      title='FlavorShare'
-      description='FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.'
-      tags={["xCode", "Swift", "SwiftUI", "Firebase", "Firestore", "Figma"]}
-    />
-    <!-- </div> -->
-
-    <h2>CONTACT ME</h2>
-    <p>
-      Welcome to my personal website! I'm a software engineer with a passion for
-      web development. I'm currently working on a variety of projects, including
-      this website, to showcase my skills and experience. Feel free to explore
-      my site and connect with me on social media!
-    </p>
+    <Experience />
+    <Education />
+    <Skills />
+    <Project />
   </div>
 </BaseLayout>
