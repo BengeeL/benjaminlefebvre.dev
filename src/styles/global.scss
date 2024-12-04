@@ -250,13 +250,13 @@ html.dark-mode .moon {
 .project-image {
   width: 40vw;
   object-fit: cover;
-  border-radius: 20px;
+  // border-radius: 20px;
   max-width: 600px;
 }
 
-.project-image:hover {
-  width: 41vw;
-}
+// .project-image:hover {
+//   width: 41vw;
+// }
 
 .project-tile-content {
   margin: 0 0 0 3%;
@@ -307,4 +307,70 @@ html.dark-mode .moon {
 .footer-credit {
   font-size: 0.8rem;
   // color: colors.$dark-1;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .experience-line {
+    flex-direction: column;
+  }
+
+  .experience-tile {
+    margin: 1rem 0;
+  }
+
+  .project-tile {
+    flex-direction: column;
+  }
+
+  .project-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-tile-content {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .project-company-links {
+    margin-top: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    margin: 5px 0;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .footer-credit {
+    font-size: 0.6rem;
+  }
 }

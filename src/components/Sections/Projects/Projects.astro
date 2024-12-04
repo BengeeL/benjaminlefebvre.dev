@@ -5,7 +5,8 @@ import ProjectTile from "./ProjectTile.astro";
 <div>
   <h2>PROJECTS</h2>
   <ProjectTile
-    image='images/LogoFS.png'
+    image='images/FlavorShare_Mockup.png'
+    imageURL='https://www.flavorshare.app'
     title='FlavorShare'
     description='FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.'
     toolsTags={[
@@ -26,5 +27,34 @@ import ProjectTile from "./ProjectTile.astro";
       "Firebase Authentication",
       "DigitalOcean S3 Storage",
     ]}
+    githubURLs={[
+      "https://github.com/BengeeL/FlavorShare",
+      "https://github.com/BengeeL/Coming-Soon-FlavorShare-Website",
+    ]}
+    linkedInURL='https://www.linkedin.com/company/flavorshare/'
+  />
+
+  <ProjectTile
+    image='images/NursePatientPortal.png'
+    imageURL='https://github.com/BengeeL/COMP308-NursePatient-Portal-AI'
+    title='Nurse-Patient Portal'
+    description="Connecting patients with their healthcare providers, the Nurse-Patient Portal is a web application that allows patients to enter their vitals, fill a pre-appointment formulaire, and communicate with their healthcare providers. As for the nurse, they can view the patient's vitals, enter new vitals, send motivational tips, view patients alerts and see the symptoms formulaire with the AI risk evaluation."
+    toolsTags={[
+      "Visual Studio Code",
+      "TensorFlowJS",
+      "MongoDB  Compass",
+      "Github",
+    ]}
+    frontendTags={["React.js", "Micro-Frontends"]}
+    backendTags={[
+      "Node.js",
+      "Express.js",
+      "JavaScript",
+      "TensorFlowJS",
+      "MongoDB",
+      "GraphQL",
+      "Micro-Services",
+    ]}
+    githubURLs={["https://github.com/BengeeL/COMP308-NursePatient-Portal-AI"]}
   />
 </div>

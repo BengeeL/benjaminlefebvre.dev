@@ -3,13 +3,22 @@ import SkillTile from "../Skills/SkillTile.astro";
 import Github from "../../Socials/Github.astro";
 import LinkedIn from "../../Socials/LinkedIn.astro";
 
-const { image, title, description, toolsTags, frontendTags, backendTags } =
-  Astro.props;
+const {
+  image,
+  imageURL,
+  title,
+  description,
+  toolsTags,
+  frontendTags,
+  backendTags,
+  githubURLs,
+  linkedInURL,
+} = Astro.props;
 ---
 
 <div class='project-tile'>
   <!-- IMAGE  -->
-  <a href='https://flavorshare.app/' target='_blank'>
+  <a href={imageURL} target='_blank'>
     <img src={image} alt={title} class='project-image' />
   </a>
 
@@ -22,11 +31,9 @@ const { image, title, description, toolsTags, frontendTags, backendTags } =
     <SkillTile skill='Backend' tags={backendTags} />
 
     <div class='project-company-links'>
-      <Github url='https://github.com/BengeeL/FlavorShare' />
-      <Github
-        url='https://github.com/BengeeL/Coming-Soon-FlavorShare-Website'
-      />
-      <LinkedIn url='https://www.linkedin.com/company/flavorshare/' />
+      {githubURLs && githubURLs.map((url: string) => <Github url={url} />)}
+
+      {linkedInURL && linkedInURL !== "" && <LinkedIn url={linkedInURL} />}
     </div>
   </div>
 </div>
